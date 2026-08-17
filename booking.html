@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | A Touch Of Class</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .booking-section { padding-top: 120px; }
+        .form-group { margin-bottom: 1.5rem; text-align: left; }
+        .form-label { display: block; margin-bottom: 0.5rem; color: var(--color-text-muted); font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; }
+        .form-control { width: 100%; padding: 1rem; background: var(--color-primary-bg); border: 1px solid rgba(255,255,255,0.1); color: #fff; font-family: var(--font-body); transition: var(--transition-fast); }
+        .form-control:focus { outline: none; border-color: var(--color-accent); }
+        .booking-container { max-width: 800px; margin: 0 auto; background: var(--color-secondary-bg); padding: 3rem; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header scrolled" id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">A Touch Of Class</a>
+            <nav class="desktop-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="booking.html" class="active">Booking</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="tel:09165540332" class="btn-icon">&#9990; 091655 40332</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <div class="mobile-nav-overlay" id="mobileNav">
+        <div class="mobile-nav-content">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="section booking-section reveal">
+        <div class="container text-center">
+            <span class="eyebrow">YOUR NEXT LOOK AWAITS</span>
+            <h1 class="headline-medium">READY FOR YOUR NEXT LOOK?</h1>
+            <p>Request an appointment below or call us directly at 091655 40332.</p>
+            
+            <div class="booking-container">
+                <div id="formStatus"></div>
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Full Name *</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="service">Service Category *</label>
+                        <select id="service" class="form-control" required>
+                            <option value="">Select a service...</option>
+                            <option value="haircut">Haircuts & Styling</option>
+                            <option value="haircare">Hair Care (Spa, Botox)</option>
+                            <option value="beauty">Beauty & Grooming</option>
+                            <option value="other">Other / Not Sure</option>
+                        </select>
+                    </div>
+                    <div class="split-screen" style="gap:1rem; margin-bottom: 0;">
+                        <div class="form-group">
+                            <label class="form-label" for="date">Preferred Date</label>
+                            <input type="date" id="date" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="time">Preferred Time</label>
+                            <input type="time" id="time" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="message">Message (Optional)</label>
+                        <textarea id="message" class="form-control" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Request Appointment</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Bottom Bar -->
+    <div class="mobile-bottom-bar">
+        <a href="tel:09165540332" class="m-btn m-btn-primary">CALL 091655 40332</a>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
